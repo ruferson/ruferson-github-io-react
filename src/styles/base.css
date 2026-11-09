@@ -1,0 +1,66 @@
+/* Accessibility: reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  html,
+  body,
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Accessibility: visible focus */
+:focus-visible {
+  outline: 2px solid var(--m3-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Accessibility: forced high contrast from OS */
+@media (forced-colors: active) {
+  .retro-box {
+    border: 2px solid CanvasText !important;
+    box-shadow: none !important;
+  }
+  .icon-modern,
+  .icon-retro {
+    fill: CanvasText !important;
+    color: CanvasText !important;
+  }
+}
+
+/* Icons: Material Symbols (modern) vs pixel-art SVG (retro) */
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined" !important;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+  vertical-align: middle;
+}
+
+.icon-retro {
+  display: none !important;
+}
+.retro-mode .icon-modern {
+  display: none !important;
+}
+.retro-mode .icon-retro {
+  display: inline-block !important;
+  vertical-align: middle;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.pixel-svg {
+  shape-rendering: crispEdges;
+  width: 1.1em;
+  height: 1.1em;
+  fill: currentColor;
+  display: inline-block;
+  vertical-align: middle;
+}

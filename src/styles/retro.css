@@ -1,0 +1,34 @@
+/* 8-bit retro mode. Enabled by adding the .retro-mode class to <body>.
+   Surfaces use .retro-box and controls use .retro-control */
+.retro-mode {
+  font-family: "Silkscreen", cursive, monospace !important;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.retro-mode *:not(.material-symbols-outlined) {
+  font-family: "Silkscreen", cursive, monospace !important;
+  border-radius: 0 !important;
+}
+
+.retro-mode .retro-box {
+  border: 4px solid #000000 !important;
+  box-shadow:
+    4px 4px 0 #000000,
+    8px 8px 0 rgba(0, 0, 0, 0.15) !important;
+}
+.dark .retro-mode .retro-box {
+  border-color: #ffffff !important;
+  box-shadow:
+    4px 4px 0 #ffffff,
+    8px 8px 0 rgba(255, 255, 255, 0.15) !important;
+}
+
+.retro-mode .retro-control {
+  border: 2px solid #000000 !important;
+  box-shadow: 2px 2px 0 #000000 !important;
+}
+.dark .retro-mode .retro-control {
+  border-color: #ffffff !important;
+  box-shadow: 2px 2px 0 #ffffff !important;
+}
